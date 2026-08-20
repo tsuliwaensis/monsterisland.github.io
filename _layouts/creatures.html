@@ -33,7 +33,7 @@
 			{% for item in page.item %}
 				<div class="stats-row">
 					<div class="stats-col">
-						<a href="{{ item.url }}">{{ item.name }}</a>
+						{% if item.url %}<a href="{{ item.url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}
 					</div>
 				</div>
 			{% endfor %}
